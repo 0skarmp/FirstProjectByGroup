@@ -7,6 +7,9 @@ var provincias = [];
 var distritos = [];
 
 function MostrarData(data, input) {
+    provincias = [];
+    distritos = [];
+
     let obj_departamento = data.filter(obj => obj && obj.NOMBDEP == input);
     let districtsPerProvince = {};
     //Cuenta distritos y provincia
@@ -23,28 +26,15 @@ function MostrarData(data, input) {
         provincias.push(`${province}`)
         distritos.push(`${districtsPerProvince[province]}`)
     }
-
-    console.log(provincias);
-
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: provincias,
-            datasets: [{
-                label: 'Distritos',
-                data: distritos,
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                }
-            },
-        }
-    });
+    newChart.data = {
+        labels: provincias,
+        datasets: [{
+            label: 'Distritos',
+            data: distritos,
+            borderWidth: 1,
+        }]
+    };
+    newChart.update();
 }
 
 btn.addEventListener('click', () => {
@@ -60,3 +50,23 @@ reload = document.querySelector('.reload')
 reload.addEventListener("click", (_) => {
     location.reload();
 });
+
+const ctx = document.getElementById('myChart');
+    var newChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: provincias,
+            datasets: [{
+                label: 'Distritos',
+                data: distritos,
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                }
+            },
+        }
+    });

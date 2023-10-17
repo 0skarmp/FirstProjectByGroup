@@ -14,14 +14,16 @@
       
       <script>
         const ctx = document.getElementById('myChart');
+
+        barras = [1, 2, 3, 4, 5]
       
         new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: barras,
             datasets: [{
               label: 'no',
-              data: [12, 19, 3, 5, 2, 3],
+              data: [1, 2, 3, 4, 5],
               borderWidth: 1
             }]
           },
@@ -33,22 +35,8 @@
             }
           }
         });
-        const config = {
-  type: 'pie',
-  data: data,
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Chart.js Pie Chart'
-      }
-    }
-  },
-};
+
       </script>
+      <script src="app.js"></script>
 </body>
 </html>

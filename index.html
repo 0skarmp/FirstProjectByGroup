@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="https://intranet.hbtn.io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -21,9 +21,13 @@
         </div>
 
         <div class="grafic-container">
-            <canvas id="grafic"></canvas>
+            <canvas id="myChart"></canvas>
         </div>
     </div>
+
+    <button class="reload">
+        <span class="material-symbols-outlined">restart_alt</span>
+    </button>
 <script src="app.js"></script>
 </body>
 </html>

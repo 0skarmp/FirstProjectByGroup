@@ -61,8 +61,8 @@ h1{
 }
 
 .filter::selection{
-    background: crimson;
-    color: #fff;
+    background: #fff;
+    color: crimson;
 }
 
 .filter:focus{
@@ -124,4 +124,23 @@ h1{
 #grafic{
     width: 100%;
     background: orange;
+}
+
+.reload{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 0;
+    outline: 0;
+    background: crimson;
+    display: flex;
+}
+
+.reload span{
+    margin: auto;
+    color: #fff;
+    font-size: 30px;
 }

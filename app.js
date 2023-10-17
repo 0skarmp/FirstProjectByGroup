@@ -3,18 +3,28 @@ const entrada = document.querySelector('.filter');
 let caja = document.querySelector('.grafic');
 
 function MostrarData(data, input) {
-    //CANTIDAD DE OBJECTOS CON EL MISMO DEPARTAMENTO
+
     let obj_departamento = data.filter(obj => obj && obj.NOMBDEP == input);
     
-    //NOMBRES DE PROVINCIAS POR DEPARTAMENTO
-    let provincias = obj_departamento.map(obj => obj.NOMBPROV);
-    let names_provincias = new Set(provincias);
+    let districtsPerProvince = {};
 
-    //CANTIDAD DE DISTRITOS POR DEPARTAMENTO
-    let countDistritos = obj_departamento.length;
+    //  cuenta distritos y provincia
+    obj_departamento.forEach(obj => {
+        const province = obj.NOMBPROV;
+        if (districtsPerProvince[province]) {
+            districtsPerProvince[province] += 1;
+        } else {
+            districtsPerProvince[province] = 1;
+        }
+    });
 
-    console.log(`Departamento: ${input} Provincias: ${Array.from(names_provincias)} Distritos: ${countDistritos}`);
-};
+    console.log(`Departamento: ${input}`);
+
+    // muetsra la suma de los distritos por provincia
+    for (const province in districtsPerProvince) {
+        console.log(`Provincia: ${province}, Cantidad de Distritos: ${districtsPerProvince[province]}`);
+    }
+}
 
 btn.addEventListener('click', () => {
     const input = entrada.value.toUpperCase();

@@ -17,3 +17,6 @@ btn.addEventListener('click', () => {
     .then(data => MostrarData(data, val))
     .catch(error => console.log(error));
 });
+
+const dpto = document.querySelector('input').innerHTML;
+const btn = document.querySelector("button").addEventListener('click', functionName);

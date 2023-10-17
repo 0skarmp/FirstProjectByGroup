@@ -39,7 +39,9 @@ h1{
 }
 
 .box-filter{
+    margin: auto;
     width: 100%;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: left;

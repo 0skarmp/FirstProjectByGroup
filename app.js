@@ -40,9 +40,9 @@ function MostrarData(data, input) {
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
                 }
-            }
+            },
         }
     });
 }
@@ -56,7 +56,7 @@ btn.addEventListener('click', () => {
     .catch(error => console.log(error));
 });
 
-var reload = document.querySelector('.reload')
+reload = document.querySelector('.reload')
 reload.addEventListener("click", (_) => {
     location.reload();
 });

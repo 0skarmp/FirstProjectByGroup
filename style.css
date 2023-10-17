@@ -137,6 +137,7 @@ h1{
     outline: 0;
     background: crimson;
     display: flex;
+    cursor: pointer;
 }
 
 .reload span{

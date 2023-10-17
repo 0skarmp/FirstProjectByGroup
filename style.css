@@ -30,6 +30,14 @@ body{
     gap: 10px;
 }
 
+h1{
+    width: 100%;
+    text-align: center;
+    color: crimson;
+    font-size: 40px;
+    font-weight: 500;
+}
+
 .box-filter{
     width: 100%;
     display: flex;

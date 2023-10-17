@@ -8,8 +8,6 @@ function MostrarData(data, input) {
     console.log(`Departamento: ${input}, cantidad de Distritos: ${count}`);
 };
 
-
-
 btn.addEventListener('click', () => {
     const input = entrada.value.toUpperCase();
     
